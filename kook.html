@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    width: 130px;
+    position: fixed;
+    z-index: 1;
+    top: 20px;
+    left: 10px;
+    background: #eee;
+    overflow-x: hidden;
+    padding: 8px 0;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #2196F3;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #064579;
+}
+
+.main {
+    margin-left: 140px; /* Same width as the sidebar + left position in px */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<div class="sidenav">
+  <a href="#about">About</a>
+  <a href="#services"></a>
+  <a href="#clients">Koop het boek</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<div class="main">
+
+<head>
+  <title>ImanLovesFood.com</title>
+</head>
+
+<h1> Welkom Bij ImanLovesFood! </h1>
+<p> De website voor vaders en kinderen die willen leren koken!</p>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {box-sizing: border-box;}
+
+.img-zoom-container {
+  position: relative;
+}
+
+.img-zoom-lens {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  /*set the size of the lens:*/
+  width: 40px;
+  height: 40px;
+}
+
+.img-zoom-result {
+  border: 1px solid #d4d4d4;
+  /*set the size of the result div:*/
+  width: 300px;
+  height: 300px;
+}
+</style>
+<script>
+function imageZoom(imgID, resultID) {
+  var img, lens, result, cx, cy;
+  img = document.getElementById(imgID);
+  result = document.getElementById(resultID);
+  /*create lens:*/
+  lens = document.createElement("DIV");
+  lens.setAttribute("class", "img-zoom-lens");
+  /*insert lens:*/
+  img.parentElement.insertBefore(lens, img);
+  /*calculate the ratio between result DIV and lens:*/
+  cx = result.offsetWidth / lens.offsetWidth;
+  cy = result.offsetHeight / lens.offsetHeight;
+  /*set background properties for the result DIV:*/
+  result.style.backgroundImage = "url('" + img.src + "')";
+  result.style.backgroundSize = (img.width * cx) + "px " + (img.height * cy) + "px";
+  /*execute a function when someone moves the cursor over the image, or the lens:*/
+  lens.addEventListener("mousemove", moveLens);
+  img.addEventListener("mousemove", moveLens);
+  /*and also for touch screens:*/
+  lens.addEventListener("touchmove", moveLens);
+  img.addEventListener("touchmove", moveLens);
+  function moveLens(e) {
+    var pos, x, y;
+    /*prevent any other actions that may occur when moving over the image:*/
+    e.preventDefault();
+    /*get the cursor's x and y positions:*/
+    pos = getCursorPos(e);
+    /*calculate the position of the lens:*/
+    x = pos.x - (lens.offsetWidth / 2);
+    y = pos.y - (lens.offsetHeight / 2);
+    /*prevent the lens from being positioned outside the image:*/
+    if (x > img.width - lens.offsetWidth) {x = img.width - lens.offsetWidth;}
+    if (x < 0) {x = 0;}
+    if (y > img.height - lens.offsetHeight) {y = img.height - lens.offsetHeight;}
+    if (y < 0) {y = 0;}
+    /*set the position of the lens:*/
+    lens.style.left = x + "px";
+    lens.style.top = y + "px";
+    /*display what the lens "sees":*/
+    result.style.backgroundPosition = "-" + (x * cx) + "px -" + (y * cy) + "px";
+  }
+  function getCursorPos(e) {
+    var a, x = 0, y = 0;
+    e = e || window.event;
+    /*get the x and y positions of the image:*/
+    a = img.getBoundingClientRect();
+    /*calculate the cursor's x and y coordinates, relative to the image:*/
+    x = e.pageX - a.left;
+    y = e.pageY - a.top;
+    /*consider any page scrolling:*/
+    x = x - window.pageXOffset;
+    y = y - window.pageYOffset;
+    return {x : x, y : y};
+  }
+}
+</script>
+</head>
+<body>
+
+<div class="img-zoom-container">
+  <img id="myimage" src="https://static.ah.nl/static/recepten/img_088125_445x297_JPG.jpg" width="300" height="240">
+  <div id="myresult" class="img-zoom-result"></div>
+</div>
+
+
+
+<script>
+// Initiate zoom effect:
+imageZoom("myimage", "myresult");
+</script>
+
+</body>
+</html>
+
+<p> Vandaag delen we een recept voor heerlijke Rissoto! </p>
+
+<h2> Benodigheden voor 4 personen: 1¼ liter kippenbouillon van tablet (2 tabletten, heet), 1 ui, 60 g ongezouten boter (of margarine), 300 g risottorijst, 100 ml droge witte wijn, 75 g Parmigiano Reggiano (stuk) </h2>
+
+<h3>
+
+Breng de  I   bouillon op hoog vuur aan de kook,
+ draai het vuur laag en laat de bouillon op het forn  E  uis staan.
+ Snipper  S   ondertussen de ui. M   Verhit de helft van de boter in ee K  n pan met dikke bodem op laag vuur.  A  Voeg de ui toe en fruit 3 min. tot hij glazig is. Voeg de risottorijst toe en bak al roerend 3 min. mee tot de korrels glazig zijn. Voeg de witte wijn toe en roer tot deze is opgenomen. Voeg een scheut kippenbouillon toe en blijf roeren   R  tot deze is opgenomen. Herhaal dit tot de rijst gaar is. Dit duurt ongeveer 20 min.
+ Het kan zijn  A  dat je wa M  t bouillon overhoudt. Rasp ondertussen de Parmezaanse kaas. Neem de pan van het vuur en voeg de kaas en de rest van de boter toe.  N  Laat met de deksel op de pan 3 min. staan. Neem de deksel van de pan, roer de risotto door en breng op smaak met peper en eventueel zout. Garneer met wat extra Parmezaanse kaas en peper en serveer direct.
+</h3>
+
+
+<h3> groetjes, Techpiet en Kookpiet en Sint. </h3>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #e9e9e9;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  border: none;
+  font-size: 17px;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav input[type=text] {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a class="active" href="#home">Recept van de dag</a>
+  <a href="#about">Nog meer recepten</a>
+  <a href="#contact">Koop het boek</a>
+  <a href="#contact">Contact</a>
+  <input type="text" placeholder="Search..">
+</div>
+
+<div style="padding-left:16px">
